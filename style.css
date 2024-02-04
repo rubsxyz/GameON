@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600;800&display=swap');
-  
+
+:root {
+    --primary-color: rgb(226, 27, 76);
+    --font-family: 'Kanit', sans-serif;
+    --black: #000000;
+    --white: #ffffff;
+}
 
 * {
     padding: 0;
@@ -7,52 +13,46 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
+    font-family: var(--font-family);
     max-width: 100%;
-}
-
-body {
-    font-family: 'Times New Roman', Times, serif;
 }
 
 nav {
     position: sticky;
     z-index: 100;
     top: 0;
-    background: #ffffff;
+    background: var(--black);
     height: 80px;
     width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 label.logo {
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+    margin-left: 10vw;
+    height: 100%;
 }
 
 .logo img {
-    padding-top: 10px;
+    padding-top: 15px;
     cursor: pointer;
-    width: 150px;
+    width: 130px;
 }
 
 nav ul {
     float: right;
-    margin-right: 20px;
+    margin-right: 10vw;
+    height: 80px;
 }
 
 nav ul li {
     display: inline-block;
     line-height: 80px;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
-    font-size: 17px;
+    color: var(--white);
+    font-size: 16px;
     padding: 4px 13px;
     border-radius: 20px;
     text-transform: uppercase;
@@ -60,13 +60,13 @@ nav ul li a {
 }
 
 a.active,a:hover {
-    color: rgb(226, 27, 76);
+    color: var(--primary-color);
     transition: .5s;
 }
 
 a.active {
-    background: rgb(226, 27, 76);
-    color: #ffffff;
+    background: var(--primary-color);
+    color: var(--white);
     height: 10px;
 }
 
@@ -83,68 +83,43 @@ a.active {
     display: none;
 }
 
-/* section 1 */
-.container {
-    background: url(assets/banner.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-}
-
-.container-banner {
-    height: 100%;
-    color: #ffffff;
-}
-
-.container-banner-upper,
-.container-banner-lower {
-    display: grid;
+.wrapper-banner {
+    display: flex;
     width: 100%;
-    height: 50%;
-    font-size: 5em;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    line-height: 0;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(36,36,36,1) 0%, rgba(0,0,0,1) 100%);
 }
 
-@keyframes animation {
-    20.0%  {color:rgb(255, 241, 245)};
-}
-
-.container-banner-lower {
-    padding-bottom: 90px;
-    transform: scaleX(2);
-    font-weight: 800;
-    color: rgb(226, 27, 76);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    animation-name: animation;
-    animation-duration: 4s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;    
-    animation-play-state: running;
-}
-
-.container-banner-upper {
-    padding-top: 90px;
-    
-}
 
 
 @media (max-width: 952px) {
     label.logo {
-        font-size: 30px;
+        width: 100px;
         padding-left: 30px;
         padding-right: 2px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin: 0 5px;
     }
 
     nav ul li a {
-        font-size: 15px;
+        font-size: 14px;
     }
+
+    .logo img {
+        padding-top: 18px;
+        width: 120px;
+    }
+
 }
 
-@media (max-width: 732px) {
+@media (max-width: 715px) {
     .check-btn {
         display: block;
     }
@@ -153,7 +128,7 @@ a.active {
         position: fixed;
         width: 100%;
         height: 360px;
-        background: rgb(216, 21, 76);
+        background: var(--primary-color);
         top: 80px;
         left: 100%;
         text-align: center;
@@ -171,12 +146,12 @@ a.active {
 
     nav ul li a {
         font-size: 17px;
-        color: #ffffff;
+        color: var(--white);
     }
 
     a:hover,a.active {
         background: none;
-        color: #ffffff;
+        color: var(--white);
         height: 100px;
     }
 
