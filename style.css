@@ -211,7 +211,7 @@ a.active {
     padding-top: 10px;
 }
 
-button {
+.button {
 	display: inline-block;
 	border-radius: 50px;
 	background-color: rgba(0, 0, 0, 0.356);
@@ -232,14 +232,14 @@ button {
 	border-radius: 50px;
 }
 
-button span {
+.button span {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
 	transition: 0.5s;
 }
 
-button span:after {
+.button span:after {
 	content: '»';
 	position: absolute;
 	opacity: 0;
@@ -248,15 +248,15 @@ button span:after {
 	transition: 0.5s;
 }
 
-button:hover {
+.button:hover {
 	background-color: var(--primary-color);
 }
 
-button:hover span {
+.button:hover span {
 	padding-right: 15px;
 }
 
-button:hover span:after {
+.button:hover span:after {
 	opacity: 1;
 	right: 0;
 }
@@ -313,6 +313,53 @@ button:hover span:after {
     background: url(/assets/gear-pc.png) center/cover;
 }
 
+/* section 4 - products */
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 2%;
+  }
+  
+.product {
+	display: grid;
+	width: 24%;
+	height: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 2px solid #ccc;
+	text-align: center;
+	color: var(--white);
+	background: url(/assets/banner.png) center/cover;
+}
+
+.wrapper-prod-img {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper-prod-info {
+	display: grid;
+	height: 90%;
+}
+
+.wrapper-prod-info .price {
+	margin-bottom: 10px;
+}
+
+.product a {
+	width: 130px;
+	border-radius: 50px;
+	align-self: center;
+	justify-self: center;
+}
+
+a .produtos-btn {	
+	width: 130px;
+	padding: 8px 12px;
+}
 
 @media (max-width: 952px) {
 	label.logo {
@@ -380,7 +427,7 @@ button:hover span:after {
 		font-size: 1.8em;
 		padding-top: 20px;
 	}
-	button {
+	.button {
 		font-size: 14px;
 		padding: 10px;
 		width: 150px;
@@ -422,6 +469,10 @@ button:hover span:after {
 	.wrapper-showoff-mid:hover,
 	.wrapper-showoff-right:hover {
 		width: 100%;
+	}	
+	/* section 4 - products */
+	.product {
+		width: 48%;
 	}
 }
 
@@ -509,7 +560,7 @@ button:hover span:after {
 	.wrapper-cta-button {
 		padding-bottom: 10px;
 	}
-	button {
+	.button {
 		font-size: 13px;
 		padding: 8px;
 		width: 130px;
@@ -529,10 +580,13 @@ button:hover span:after {
 		height: 90%;
 	}
 	
-	
 	.wrapper-showoff-left:hover,
 	.wrapper-showoff-mid:hover,
 	.wrapper-showoff-right:hover {
 		height: 100%;
+	}
+	/* section 4 - products */
+	.product {
+		width: 90%;
 	}
 }
