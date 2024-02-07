@@ -30,7 +30,7 @@
 }
 
 body {
-	background-color: var(--black);
+	background-color: rgba(36, 36, 36, 1);
 }
 
 nav {
@@ -179,6 +179,7 @@ a.active {
 	background-color: var(--primary-color);
 	padding: 3px 0px;
 	box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.411);
+    margin-bottom: 100px;
 }
 
 .wrapper-cta-banner {
@@ -198,16 +199,16 @@ a.active {
 	font-size: 2.5em;
 }
 
-.wrapper-cta-button {
-    padding-top: 10px;
+.wrapper-cta-text h1 {
+    display: flex;
+    font-weight: 800;
+    color: var(--white);
+    transform: scaleX(1.1);
+    text-shadow: 0px 2px 9px #000000;
 }
 
-.wrapper-cta-text h1 {
-	display: flex;
-	font-weight: 800;
-	color: var(--white);
-	transform: scaleX(1.1);
-    text-shadow: 0px 2px 9px #000000;
+.wrapper-cta-button {
+    padding-top: 10px;
 }
 
 button {
@@ -261,7 +262,56 @@ button:hover span:after {
 }
 
 /* section3 produtos*/
+.wrapper-showoff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 500px;
+    background-color: rgba(36,36,36,1);
+    margin-bottom: 100px;
+}
 
+.wrapper-showoff-prod {
+    display: flex;
+    width: 95%;
+    height: 95%;
+    border: 3px solid var(--primary-color);
+    border-radius: 30px;
+}
+
+.wrapper-showoff-left,
+.wrapper-showoff-mid,
+.wrapper-showoff-right {
+    position: relative;
+    width: 33.33%;
+    border: 1px solid var(--primary-color);
+    background-color: #110505;
+    transition: 0.5s;
+}
+
+.wrapper-showoff-left:hover,
+.wrapper-showoff-mid:hover,
+.wrapper-showoff-right:hover {
+	opacity: 0.5;
+	cursor: pointer;
+	width: 35%;
+}
+
+.wrapper-showoff-left {
+    border-radius: 27px 0px 0px 27px;
+    background: url(/assets/gear-ps5.png) center/cover;
+}
+
+.wrapper-showoff-mid {
+    border-radius: 0px 0px 0px 0px;
+    background: url(/assets/gear-nintendo.png) center/cover;
+}
+
+.wrapper-showoff-right {
+    border-radius: 0px 27px 27px 0px;
+    background: url(/assets/gear-pc.png) center/cover;
+}
 
 
 @media (max-width: 952px) {
@@ -338,6 +388,41 @@ button:hover span:after {
     .cta-button-link {
         height: 60%;
     }
+
+	/* section3 showoff */
+	.wrapper-showoff {
+		height: 700px;
+	}
+
+	.wrapper-showoff-prod {
+		display: flex;
+		width: 70%;
+	}
+
+	.wrapper-showoff-prod {
+		display: grid;
+		height: 110%;
+	}
+	
+	.wrapper-showoff-left,
+	.wrapper-showoff-mid,
+	.wrapper-showoff-right {
+		width: 100%;
+	}
+
+	.wrapper-showoff-left {
+		border-radius: 27px 27px 0px 0px;
+	}
+
+	.wrapper-showoff-right {
+		border-radius: 0px 0px 27px 27px;
+	}
+	
+	.wrapper-showoff-left:hover,
+	.wrapper-showoff-mid:hover,
+	.wrapper-showoff-right:hover {
+		width: 100%;
+	}
 }
 
 @media (max-width: 715px) {
@@ -415,6 +500,7 @@ button:hover span:after {
 	/* section2 */
 	.wrapper-cta {
 		height: 160px;
+		margin-bottom: 50px;
 	}
 	.wrapper-cta-text {
 		font-size: 1.5em;
@@ -432,4 +518,21 @@ button:hover span:after {
         height: 70%;
         width: 130px;
     }
+
+	/* section3 showoff */
+	.wrapper-showoff-prod {
+		height: 100%;
+	}	
+	
+	.wrapper-showoff-prod {
+		display: grid;
+		height: 90%;
+	}
+	
+	
+	.wrapper-showoff-left:hover,
+	.wrapper-showoff-mid:hover,
+	.wrapper-showoff-right:hover {
+		height: 100%;
+	}
 }
