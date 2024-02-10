@@ -1,0 +1,141 @@
+main {
+    display: flex;
+    min-height: 91vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body {
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.wrapper-container {
+    display: flex;
+    height: 600px;
+    min-width: 100%;
+    margin-bottom: 100px;
+    padding: 1%;
+    color: var(--white);
+}
+
+.wrapper-container-left, 
+.wrapper-container-right {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-left-text {
+    display: grid;
+    height: auto;
+    font-size: 7em;
+    line-height: 120px;
+    text-shadow: 0px 2px 9px #000000;
+}
+
+#text-on {
+    transform: scaleX(2.05);
+    padding-right: 0px;
+}
+
+#game {
+    justify-self: center;
+    font-size: 1.5em;
+}
+
+.wrapper-right-text {
+    display: grid;
+    font-size: 2em;
+    text-shadow: 0px 2px 9px #000000;
+    font-weight: 200;
+    padding-right: 100px;
+}
+
+#about-us {
+    display: flex;
+    align-self: center;
+    font-weight: 700;
+}
+
+p {
+    font-size: 0.8em;
+    text-align: justify;
+}
+@media (max-width: 952px) {
+    .wrapper-left-text {
+        display: grid;
+        height: auto;
+        font-size: 7em;
+        line-height: 80px;
+        text-shadow: 0px 2px 9px #000000;
+    }
+
+    .wrapper-right-text {
+        padding-right: 5%;
+    }
+
+    #game {
+        font-size: 1em;
+    }
+
+    #text-on {
+        font-size: 1em;
+        margin-right: 0px;
+    }    
+
+    .wrapper-right-text h1 {
+        font-size: 1em;
+    }
+    
+    .wrapper-right-text p {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 715px) { 
+    main {
+        min-height: 110vh;
+    }
+
+    .wrapper-container {
+        display: grid;
+    }
+
+    .wrapper-container-left {
+        margin-bottom: 100px;
+    }
+
+    
+    #text-on {
+        font-size: 1.01em;
+        margin-right: 0px;
+    }
+
+    .wrapper-container-left, 
+    .wrapper-container-right {
+        width: 100%;
+    }
+
+    
+    .wrapper-container-right {
+        padding: 20px;
+        margin-bottom: 100px;
+        height: 500px;
+    }
+
+    .wrapper-right-text {
+        padding: 0px;
+    }
+
+    .wrapper-right-text h1 {
+        font-size: 1.5em;
+    }
+
+    .wrapper-right-text p {
+        font-size: 0.6em;
+        width: auto;
+    }
+}
