@@ -47,6 +47,14 @@
  nav:hover {
      background-color: rgba(0, 0, 0, 0.842);
 }
+
+#registo-btn {
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+#registo-btn:hover { color: var(--white); }
+
  label.logo {
      margin-left: 10vw;
      height: 100%;
@@ -59,7 +67,6 @@
  nav ul {
      float: right;
      margin-right: 10vw;
-     height: 80px;
 }
  nav ul li {
      display: inline-block;
@@ -204,10 +211,12 @@
      border-radius: 50px;
 }
  .button span {
-     cursor: pointer;
-     display: inline-block;
-     position: relative;
-     transition: 0.5s;
+    font-size: 0.95em; 
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
 }
  .button span:after {
      content: '»';
@@ -416,7 +425,7 @@
          margin-left: 0;
     }
      nav ul {
-         margin-right: 0;
+         margin-right: 10px;
     }
      nav ul li {
          margin: 0 5px;
@@ -434,6 +443,7 @@
          width: 50%;
          height: auto;
     }
+
     /* section1 */
      .wrapper-banner {
          height: 80vh;
@@ -536,20 +546,32 @@
      .check-btn {
          display: block;
     }
-     ul {
+        
+    #registo-btn {
+        background-color: transparent;
+        border-radius: 3px;
+    }
+
+    #registo-btn:hover {
+        background-color: transparent;
+        color: var(--white);
+        border-radius: 3px;
+    }
+
+    ul {
          position: fixed;
          width: 100%;
-         height: 360px;
+         height: 400px;
          background: var(--primary-color);
          top: 80px;
          left: 100%;
          text-align: center;
          transition: all .5s;
     }
-     nav ul li {
+    nav ul li {
          display: block;
          padding: 20px 0px;
-         line-height: 30px;
+         line-height: 40px;
          transition: all .5s;
          width: 100%;
          margin: 0;
@@ -561,14 +583,12 @@
      a:hover, a.active {
          background: none;
          color: var(--white);
-         height: 100px;
+         height: 500px;
     }
      nav ul li:hover {
          background-color: rgba(211, 211, 211, 0.2);
-         padding: 25px 0px 25px;
-         color: #990808;
     }
-     #check:checked~ul {
+     #check:checked ~ ul {
          left: 0;
     }
     /* section1 */
