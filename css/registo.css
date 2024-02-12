@@ -1,0 +1,128 @@
+main {
+    display: flex;
+    min-height: 91vh;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* section 5 */
+.wrapper-contact {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    padding: 50px 50px 150px 50px;
+}
+.wrapper-contact-form {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    background: #303030;
+    box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+}
+.form-container {
+    padding: 90px;
+    display: grid;
+}
+.form-container h3 {
+    justify-self: center;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.contact-form {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.img-signup {
+    background: url(../assets/banner-prod.png) center/cover;
+}
+
+.button {
+    margin-bottom: 25px;
+}
+
+.space-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b6b6b660;
+    margin-bottom: 25px;
+}
+
+hr {
+    width: 50px;
+    height: 0px;
+    border-color: #b6b6b660; /* Set the desired color using a hex code, RGB value, or color name */
+
+}
+
+#or-line {
+    margin: 0px 10px;
+}
+
+#login-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #222222;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: var(--white);
+    border-radius: 0.4rem;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.411);
+}
+
+#login-btn:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+#forgot-password {
+    font-weight: 200;
+    font-size: .8em;
+    color: rgba(167, 167, 167, 0.589);
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+#forgot-password:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+@media (max-width: 952px) {
+    .wrapper-contact {
+        width: 100%;
+    }
+}
+
+@media (max-width: 715px) {
+    .wrapper-contact {
+        width: 90%;
+    }
+
+    .wrapper-contact-form {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+   }
+
+   .wrapper-contact {
+       padding: 0px 15px 80px 15px;
+   }
+
+}
